@@ -1,15 +1,24 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
+    <meta charset="UTF-8">
     <title>Delete Blog</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'css/delete_blog.css' %}">
 </head>
 <body>
-    <h1>Delete Blog</h1>
-    <p>Are you sure you want to delete "{{ object.title }}"?</p>
-    <form method="post">
-        {% csrf_token %}
-        <button type="submit">Yes, delete</button>
-    </form>
-    <a href="{% url 'blog_list' %}">Cancel</a>
+    <div class="container">
+        <header>
+            <h1>Delete Blog</h1>
+        </header>
+        <main>
+            <p>Are you sure you want to delete "{{ object.title }}"?</p>
+            <form method="post">
+                {% csrf_token %}
+                <button type="submit">Yes, delete</button>
+            </form>
+            <a href="{% url 'blog_list' %}">Cancel</a>
+        </main>
+    </div>
 </body>
 </html>

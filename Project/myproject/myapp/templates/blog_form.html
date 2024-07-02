@@ -2,10 +2,14 @@
 
 {% block title %}Create a New Blog{% endblock %}
 
+{% load static %}  <!-- Load static tag outside of any block -->
+
 {% block content %}
-<form method="post">
-    {% csrf_token %}
-    {{ form.as_p }}
-    <button type="submit">Submit</button>
-</form>
+    <link rel="stylesheet" href="{% static 'css/form.css' %}">
+
+    <form method="post">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit">Submit</button>
+    </form>
 {% endblock %}

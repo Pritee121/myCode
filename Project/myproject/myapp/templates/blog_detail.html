@@ -1,17 +1,22 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
+    <meta charset="UTF-8">
     <title>{{ object.title }}</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'css/styles2.css' %}">
 </head>
 <body>
-    <h1>{{ object.title }}</h1>
-    <h2>{{ object.subtitle }}</h2>
-    <p>{{ object.description }}</p>
-    {% if object.image %}
-        <img src="{{ object.image.url }}" alt="{{ object.title }}">
-    {% endif %}
-    <a href="{% url 'blog_edit' object.pk %}">Edit</a>
-    <a href="{% url 'blog_delete' object.pk %}">Delete</a>
-    <a href="{% url 'blog_list' %}">Back to List</a>
+    <div class="container">
+        <h1>{{ object.title }}</h1>
+        <h2>{{ object.subtitle }}</h2>
+        <p>{{ object.description }}</p>
+        {% if object.image %}
+            <img src="{{ object.image.url }}" alt="{{ object.title }}">
+        {% endif %}
+        <a href="{% url 'blog_edit' object.pk %}">Edit</a>
+        <a href="{% url 'blog_delete' object.pk %}">Delete</a>
+        <a href="{% url 'blog_list' %}" class="btn-back">Back to List</a>
+    </div>
 </body>
 </html>
