@@ -1,0 +1,36 @@
+/* styles.css */
+
+/* Reset default margin and padding */
+body, h1, p {
+    margin: 0;
+    padding: 0;
+}
+
+/* Center align text */
+body {
+    text-align: center;
+    font-family: Arial, sans-serif;
+}
+
+/* Header styles */
+h1 {
+    color: #333; /* Dark gray color for the header */
+    margin: 20px 0; /* Margin top and bottom */
+}
+
+/* Paragraph styles */
+p {
+    color: #666; /* Light gray color for paragraphs */
+    margin-bottom: 10px; /* Margin bottom */
+}
+
+/* Link styles */
+a {
+    text-decoration: none; /* Remove underline */
+    color: #0066cc; /* Blue color for links */
+}
+
+/* Link hover styles */
+a:hover {
+    text-decoration: underline; /* Underline on hover */
+}
